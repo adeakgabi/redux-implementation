@@ -9,22 +9,15 @@ public class Main {
 		
 		Store<State> store = Store.createStore(state, reducer);
 		store.notifySubscribers();
-//		store.dispatch(LoggedReducer.logIn());
+		store.dispatch(Actions.LOGIN);
 		store.dispatch(Actions.INCREMENT);
 		store.dispatch(Actions.INCREMENT);
 		store.dispatch(Actions.DECREMENT);
 		store.dispatch(Actions.DECREMENT);
-
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		
 		store.dispatch(Actions.PLUS2);
 		store.dispatch(Actions.PLUS2);
 		store.dispatch(Actions.PLUS2);
-//		store.dispatch(LoggedReducer.logOut());
+		store.dispatch(Actions.LOGOUT);
 		
 	}
 
